@@ -1,0 +1,171 @@
+{
+  "model": "claude-sonnet-4-5",
+  "max_tokens": 1024,
+  "system": "You are a helpful assistant. Use the tools when they help.",
+  "tools": [
+    {
+      "name": "calculator",
+      "description": "Evaluate a simple arithmetic expression such as '12 * 34'.",
+      "input_schema": {
+        "properties": {
+          "expression": {
+            "description": "Two numbers and one operator: + - * /",
+            "type": "string"
+          }
+        },
+        "required": [
+          "expression"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "name": "word_count",
+      "description": "Count the words in a piece of text.",
+      "input_schema": {
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ],
+        "type": "object"
+      }
+    },
+    {
+      "name": "get_version",
+      "description": "Return the version of this assistant. Takes no arguments.",
+      "input_schema": {
+        "properties": {},
+        "type": "object"
+      }
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is 12 * 34? Also, how many words are in 'the quick brown fox'?"
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "",
+          "signature": "EqoBCkgIARABGAIiQNx0dGhpcyBpcyBhIGZha2Ugc2lnbmF0dXJl"
+        },
+        {
+          "type": "text",
+          "text": "I'll use my tools to answer both questions."
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_01A09q90qw90lq917835lq9",
+          "name": "calculator",
+          "input": {
+            "expression": "12 * 34"
+          }
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_01B7xk2Rm4NpTz8YwQ3vJd5c",
+          "name": "word_count",
+          "input": {
+            "text": "the quick brown fox"
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "tool_result",
+          "tool_use_id": "toolu_01A09q90qw90lq917835lq9",
+          "content": "408"
+        },
+        {
+          "type": "tool_result",
+          "tool_use_id": "toolu_01B7xk2Rm4NpTz8YwQ3vJd5c",
+          "content": "4"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "12 * 34 = 408, and the phrase has 4 words."
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": "고마워요! Now divide 10 by 0 please, and tell me your version. 🙂"
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Let me try both."
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_01C3hV8sLq6DfGa2Ue9Xn4Kt",
+          "name": "calculator",
+          "input": {
+            "expression": "10 / 0"
+          }
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_01D5jW1tMr7EgHb3Vf0Yo6Lu",
+          "name": "get_version",
+          "input": {}
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "tool_result",
+          "tool_use_id": "toolu_01C3hV8sLq6DfGa2Ue9Xn4Kt",
+          "content": "error: division by zero",
+          "is_error": true
+        },
+        {
+          "type": "tool_result",
+          "tool_use_id": "toolu_01D5jW1tMr7EgHb3Vf0Yo6Lu",
+          "content": "1.4.2"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "redacted_thinking",
+          "data": "EmwKAhgBEgy3cmVkYWN0ZWQgYnkgdGhlIEFQSQ=="
+        },
+        {
+          "type": "text",
+          "text": "Division by zero is \"undefined\", so the calculator reported an error.\nMy version is 1.4.2."
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "Great, that is all for today."
+        }
+      ]
+    }
+  ]
+}

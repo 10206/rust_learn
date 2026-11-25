@@ -1,0 +1,13 @@
+[package]
+name = "ch14_async_tokio"
+version = "0.1.0"
+edition.workspace = true
+publish = false
+
+[dependencies]
+tokio = { workspace = true }
+
+# 테스트에서 "가짜 시계"(start_paused)를 쓰기 위한 test-util 기능.
+# 실제로 기다리지 않고도 sleep 이 즉시 지나가서 테스트가 빠르고 결정적입니다.
+[dev-dependencies]
+tokio = { workspace = true, features = ["test-util"] }
