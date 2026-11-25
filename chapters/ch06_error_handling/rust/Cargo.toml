@@ -1,0 +1,5 @@
+[package]
+name = "ch06_error_handling"
+version = "0.1.0"
+edition.workspace = true
+publish = false
