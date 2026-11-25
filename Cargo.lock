@@ -75,6 +75,10 @@ name = "ch02_syntax_basics"
 version = "0.1.0"
 
 [[package]]
+name = "ch03_ownership"
+version = "0.1.0"
+
+[[package]]
 name = "ch05_structs_enums"
 version = "0.1.0"
 
@@ -100,6 +104,18 @@ version = "0.1.0"
 
 [[package]]
 name = "ch10_modules_testing_solution"
+version = "0.1.0"
+
+[[package]]
+name = "ch11_smart_pointers"
+version = "0.1.0"
+
+[[package]]
+name = "ch12_idiomatic_rust"
+version = "0.1.0"
+
+[[package]]
+name = "ch13_concurrency"
 version = "0.1.0"
 
 [[package]]
