@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "rust-lang.rust-analyzer",
+    "vadimcn.vscode-lldb",
+    "ms-vscode.cpptools",
+    "ms-python.python",
+    "tamasfe.even-better-toml",
+    "usernamehw.errorlens"
+  ]
+}

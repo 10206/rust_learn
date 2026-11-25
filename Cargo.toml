@@ -1,0 +1,18 @@
+# rust_learn 워크스페이스 루트.
+# members 의 glob: 매칭이 하나도 없는 glob 은 리터럴 경로로 취급되어 오류가 납니다.
+# 그래서 "rust_solution" 을 따로 적지 않고 "rust*" 하나로 rust/ 와 rust_solution/ 을 함께 잡습니다.
+# (chapters/ 에 최소 하나의 rust 크레이트가 있어야 합니다.)
+[workspace]
+resolver = "3"
+members = ["chapters/*/rust*"]
+
+[workspace.package]
+edition = "2024"
+
+[workspace.dependencies]
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+anyhow = "1"
+thiserror = "2"
