@@ -1,0 +1,5 @@
+[package]
+name = "ch11_smart_pointers"
+version = "0.1.0"
+edition.workspace = true
+publish = false
