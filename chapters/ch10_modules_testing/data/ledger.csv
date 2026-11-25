@@ -1,0 +1,17 @@
+date,category,amount_cents,description
+2024-01-03,salary,300000,january pay
+2024-01-05,rent,-120000,rent for january
+2024-01-07,food,-4550,groceries
+2024-01-12,transport,-2500,monthly pass
+2024-01-20,gift,-3000,birthday present
+
+2024-02-01,salary,300000,february pay
+2024-02-03,food,-1275,lunch
+2024-02-10,rent,-120000,rent for february
+2024-02-14,food,abc,dinner
+2024-02-20,other,1000,sold old book
+2024-13-01,food,-100,impossible month
+2024-03-01,salary,300000,march pay
+2024-03-05,food,-3980,groceries
+2024-03-09,transport
+2024-03-15,food,-2050,dinner with friends

@@ -1,0 +1,15 @@
+2024-05-01 10:00:01 INFO auth: user alice logged in
+2024-05-01 10:00:03 DEBUG db: connection pool initialized with 8 connections
+2024-05-01 10:00:07 WARN cache: miss rate above threshold
+2024-05-01 10:00:09 INFO api: GET /items returned 200
+this line is not a valid log record
+2024-05-01 10:00:12 ERROR db: query timeout after 30s while loading user profile
+2024-05-01 10:00:15 INFO auth: user bob logged in
+2024-05-01 10:00:18 WARN auth: three failed password attempts for carol
+
+2024-05-01 10:00:21 ERROR api: upstream service unavailable
+2024-05-01 10:00:24 INFO cache: warmed 120 keys
+2024-05-01 10:00:26 TRACE api: this level is not supported
+2024-05-01 10:00:30 INFO api: POST /items returned 201
+2024-05-01 10:00:33 ERROR auth: token signature mismatch
+2024-05-01 10:00:35 DEBUG api no colon after the module name
